@@ -15,13 +15,10 @@ function App() {
       ...personList,
       <PersonList info={inputText} key={personList.length} />,
     ];
-    
-    setPersonList(newPersonList);
-    
-    console.log(newPersonList); // Log the entire updated list
-  };
 
-  
+    setPersonList(newPersonList);
+
+  };
 
   return (
     <div className="App">
