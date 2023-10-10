@@ -11,11 +11,17 @@ function App() {
   };
 
   const addPersonList = () => {
-    setPersonList((index) => [
+    const newPersonList = [
       ...personList,
-      <PersonList info={inputText} key={index.length} />,
-    ]);
+      <PersonList info={inputText} key={personList.length} />,
+    ];
+    
+    setPersonList(newPersonList);
+    
+    console.log(newPersonList); // Log the entire updated list
   };
+
+  
 
   return (
     <div className="App">
