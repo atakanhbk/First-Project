@@ -15,9 +15,7 @@ function App() {
       alert("Please Enter A Value");
     } else {
       if (isNameAlreadyExists(inputText)) {
-        alert(
-          "You cannot add this value because it already exists in the list."
-        );
+        alert("ALREADY HAVE");
       } else {
         const newPersonList = [
           ...personList,
@@ -25,13 +23,17 @@ function App() {
         ];
         setPersonList(newPersonList);
         setInputText("");
-      
       }
     }
+
+    
   };
 
+
+
+
   function isNameAlreadyExists(name) {
-    return personList.some((person) => person.props.info === name);
+    return personList.some((person) => person.props.info.toLocaleUpperCase() === name.toLocaleUpperCase());
   }
 
   const handleSubmit = (e) => e.preventDefault();
