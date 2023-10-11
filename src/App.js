@@ -3,6 +3,7 @@ import "./App.css";
 import PersonList from "./Components/PersonList";
 import CreatePerson from "./Components/CreatePerson";
 
+
 function App() {
 
 
@@ -10,6 +11,7 @@ function App() {
     <div className="App">
       <h1>Add Something</h1>
       <CreatePerson/>
+ 
     </div>
   );
 }
