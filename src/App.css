@@ -7,9 +7,12 @@
   flex-wrap: wrap;
   columns: 3;
   gap: 3px;
+  padding: 10px;
 }
 
 .person-name{
-  width: 300px;
-  border: 1px solid black;
+  width: auto;
+  border: 1px solid green ;
+  border-radius: 10px;
+  padding: 5px;
 }

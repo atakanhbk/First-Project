@@ -11,20 +11,29 @@ function App() {
   };
 
   const addPersonList = () => {
-    const newPersonList = [
-      ...personList,
-      <PersonList info={inputText} key={personList.length} />,
-    ];
+    console.log(inputText);
 
-    setPersonList(newPersonList);
-
+    if (inputText === "") {
+      alert("Please Enter A Value");
+    } else {
+      const newPersonList = [
+        ...personList,
+        <PersonList info={inputText} key={personList.length} />,
+      ];
+      setInputText("");
+      setPersonList(newPersonList);
+    }
   };
+
+  const handleSubmit = (e) => e.preventDefault();
 
   return (
     <div className="App">
-      <input onChange={setInputValue} />
-      <button onClick={addPersonList}>Add Person List</button>
-      <div className="person-list">{personList}</div>
+      <form onSubmit={handleSubmit}>
+        <input value={inputText} onChange={setInputValue} />
+        <button onClick={addPersonList}>Add Person List</button>
+        <div className="person-list">{personList}</div>
+      </form>
     </div>
   );
 }
