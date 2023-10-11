@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { forwardRef, useState } from "react";
 import "./App.css";
 import PersonList from "./Components/PersonList";
 
@@ -11,8 +11,6 @@ function App() {
   };
 
   const addPersonList = () => {
-    console.log(inputText);
-
     if (inputText === "") {
       alert("Please Enter A Value");
     } else {
@@ -22,6 +20,8 @@ function App() {
       ];
       setInputText("");
       setPersonList(newPersonList);
+
+
     }
   };
 

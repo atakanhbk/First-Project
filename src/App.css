@@ -1,8 +1,8 @@
-.App{
+.App {
   padding: 20px;
 }
 
-.person-list{
+.person-list {
   display: flex;
   flex-wrap: wrap;
   columns: 3;
@@ -10,28 +10,29 @@
   padding: 10px;
 }
 
-.person-name{
+.person-name {
   width: auto;
-  border: 2px solid black ;
+  border: 2px solid black;
   background-color: blue;
-  color:white;
+  color: white;
   border-radius: 10px;
   padding: 5px;
 }
 
-input{
+input {
   margin: 10px;
   width: 200px;
   height: 25px;
   padding: 5px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
-button{
+button {
   width: 100px;
   height: 30px;
   background-color: green;
   border: 1px solid black;
   color: white;
   border-radius: 10px;
-  
 }
