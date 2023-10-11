@@ -2,6 +2,7 @@ import PersonList from "./PersonList";
 import { useState } from "react";
 import ClearAllList from "./ClearAllList";
 
+
 function CreatePerson() {
   const [inputText, setInputText] = useState("");
   const [personList, setPersonList] = useState([]);
@@ -48,7 +49,7 @@ function CreatePerson() {
       <form onSubmit={handleSubmit}>
         <h2>
           The Thing Will Be Add{" "}
-          <input value={inputText} onChange={setInputValue} />
+          <input value={inputText} onChange={setInputValue} placeholder="Type something ...." />
           <button className="add-button" onClick={addPersonList}>Add</button>
           <button className="clear-button" onClick={clearAllData}>Clear All Data</button>
         </h2>
