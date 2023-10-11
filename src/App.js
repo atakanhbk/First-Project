@@ -14,16 +14,25 @@ function App() {
     if (inputText === "") {
       alert("Please Enter A Value");
     } else {
-      const newPersonList = [
-        ...personList,
-        <PersonList info={inputText} key={personList.length} />,
-      ];
-      setInputText("");
-      setPersonList(newPersonList);
-
-
+      if (isNameAlreadyExists(inputText)) {
+        alert(
+          "You cannot add this value because it already exists in the list."
+        );
+      } else {
+        const newPersonList = [
+          ...personList,
+          <PersonList info={inputText} key={personList.length} />,
+        ];
+        setPersonList(newPersonList);
+        setInputText("");
+      
+      }
     }
   };
+
+  function isNameAlreadyExists(name) {
+    return personList.some((person) => person.props.info === name);
+  }
 
   const handleSubmit = (e) => e.preventDefault();
 
