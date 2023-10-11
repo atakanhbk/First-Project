@@ -29,9 +29,14 @@ function App() {
 
   return (
     <div className="App">
+      <h1>Add Something</h1>
       <form onSubmit={handleSubmit}>
-        <input value={inputText} onChange={setInputValue} />
-        <button onClick={addPersonList}>Add Person List</button>
+        <h2>
+          The Thing Will Be Add{" "}
+          <input value={inputText} onChange={setInputValue} />
+          <button onClick={addPersonList}>Add</button>
+        </h2>
+
         <div className="person-list">{personList}</div>
       </form>
     </div>
